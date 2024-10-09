@@ -1,0 +1,10 @@
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "input.txt"
+const input = fs.readFileSync(filePath).toString().split(' ');
+const [a,b] = input.map(Number);
+
+console.log(`${a+b}
+${a-b}
+${a*b}
+${Math.floor(a/b)}
+${a%b}`);
