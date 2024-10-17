@@ -6,7 +6,14 @@ const t = input[0];
 
 let result = '';
 for (let i = 1; i <= t; i++) {
-    const [r,s] = input[i].split(" ");
+    let [r,s] = input[i].split(" ");
+    r = Number(r);
 
+    for (const char of s) {
+        result += char.repeat(r);
+    }
 
+    result += "\n";
 }
+
+console.log(result);
